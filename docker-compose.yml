@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  wordpress:
+    container_name: wordpress-personal-website
+    image: wordpress:latest
+    restart: always
+    ports:
+      - "8002:80"
+    environment:
+      WORDPRESS_DB_HOST: mysql_db
+      WORDPRESS_DB_USER: skyland
+      WORDPRESS_DB_PASSWORD: pass123
+      WORDPRESS_DB_NAME: personal_website
+    volumes:
+      - "./:/var/www/html"
+      - "./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini"
+    networks:
+      my_network:
+        aliases:
+          - wordpress-personal
+
+networks:
+  my_network:
+    external: true

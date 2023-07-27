@@ -1,0 +1,48 @@
+.foreword-image-container{
+    height: 52vh;
+}
+
+.expander {
+	width: 27.5vw;
+	background:black;
+	overflow:hidden;
+	margin-top:20px;
+	margin-left:30px;
+}
+
+.expander:first-child {
+	margin-left:0px;
+}
+
+.property-project-description{
+	max-width: 28vw;
+}
+
+.project-list__container__project{
+	max-width: 85.5vw;
+}
+
+
+@media only screen and (max-width: 600px) {
+	.slider {
+		width: 100%;
+		margin: 0;
+	}
+	
+	.slick-slide img {
+		width: 100%;
+		height: 8rem;
+		padding: 0 5px;
+	}
+	
+	.slick-center .paragraph {
+		display: block;
+		margin-top: 3rem;
+		overflow-y: scroll;
+	}
+	
+	.paragraph {
+		display: none;
+		margin-top: 8px;
+	}
+}
